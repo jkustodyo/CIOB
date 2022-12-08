@@ -178,7 +178,7 @@ public class Design extends javax.swing.JFrame {
             }
         });
 
-        Editar.setText("Editar / salvar");
+        Editar.setText(" ");
         Editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EditarActionPerformed(evt);
@@ -307,10 +307,10 @@ public class Design extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Editar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -493,9 +493,13 @@ Salvar.setEnabled(true);
         // TODO add your handling code here:
         if(idAtual>0)
         try {
-         //   Aluno obj = new Aluno();  
+         //   Aluno obj = new Aluno();
+            MateriaDAO mat= new MateriaDAO();
+            mat.excluirMateria(idAtual);
+         
             AlunoDAO dao = new AlunoDAO();
             dao.excluirAluno( idAtual);
+         
            //remove(idAtual);
             Listar();
             

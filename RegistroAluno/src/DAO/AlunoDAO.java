@@ -51,37 +51,6 @@ public class AlunoDAO {
          }
     }
     
-//
-//public List<Materia>ListaRMateria(){
-// try{
-// List<Materia>lista=new ArrayList<Materia>();
-
-//String cmdsql="select convert(a.DataNasc,char) DataNascX, a.* from Aluno a order by idAluno desc";
-//PreparedStatement stmt = conecta.prepareStatement(cmdsql);
-
-//ResultSet rs = stmt.executeQuery();
-
-//while(rs.next()){
-//    Materia v=new Materia();
-//   v.setMat(rs.getInt("mat"));
-//   v.setPort(rs.getInt("port"));
-//   v.setGeo(rs.getInt"geo"));
-//   v.setRG(rs.getString("rg"));
-//   v.setCPF(rs.getString("cpf"));
-//   v.setTurma(rs.getString("turma"));
-//   v.setCurso(rs.getString("curso"));
-//   v.setTurno(rs.getString("turno"));
-//   v.setAno(rs.getString("ano"));
-//   v.setFoto(rs.getBytes("foto"));
-   
-//   lista.add(v);
-//}
-//return lista;
-// }catch(SQLException erro){
-//      throw new RuntimeException(erro);
-// }
-//  }
- 
  //
  public void alterarAluno(Aluno obj, Integer id){
      try{

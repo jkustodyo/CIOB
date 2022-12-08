@@ -107,6 +107,20 @@ public class MateriaDAO {
          }
     }
     
+  public void excluirMateria(Integer id) {
+     try{
+         String cmdsql="delete from Materia where idAluno=" + id.toString();
+         PreparedStatement stmt = conecta.prepareStatement(cmdsql);
+         
+      stmt.execute();
+      stmt.close();
+     } catch (SQLException erro){
+         throw new RuntimeException(erro);
+     }
+          
+ }
+   
+    
     public List<Materia> ListaRMateria(int id) {
        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
        
